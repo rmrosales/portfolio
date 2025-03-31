@@ -26,7 +26,9 @@
                         <li><a class="nav-link" href="./index.html">Home</a></li>
                         <li><a class="nav-link" href="./index.html#section2">Case Studies</a></li>
                         <li><a class="nav-link" href="./index.html#section3">About</a></li>
-                        <li><a class="nav-link" href="https://docs.google.com/document/d/1KqaQEuG12TvkFZHHofGy-mMIVG_9bF7fMXY-jlOoIog/edit?usp=sharing" target="_blank">Resume</a></li>
+                        <li><a class="nav-link"
+                                href="https://docs.google.com/document/d/1KqaQEuG12TvkFZHHofGy-mMIVG_9bF7fMXY-jlOoIog/edit?usp=sharing"
+                                target="_blank">Resume</a></li>
                         <li><a class="hero-nav-link" href="https://www.linkedin.com/in/takierosales"
                                 target="_blank">Hire Me</a></li>
                     </ul>
@@ -184,7 +186,8 @@
                         <li><a href="./index.html">Home</a></li>
                         <li><a href="./index.html#section3">About</a></li>
                         <li><a href="./index.html#section2">Case Studies</a></li>
-                        <li><a href="https://docs.google.com/document/d/1KqaQEuG12TvkFZHHofGy-mMIVG_9bF7fMXY-jlOoIog/edit?usp=sharing" target="_blank">Resume</a></li>
+                        <li><a href="https://docs.google.com/document/d/1KqaQEuG12TvkFZHHofGy-mMIVG_9bF7fMXY-jlOoIog/edit?usp=sharing"
+                                target="_blank">Resume</a></li>
                     </ul>
                     <ul>
                         <li><a href="https://github.com/rmrosales" target="_blank">Github</a></li>
@@ -200,6 +203,53 @@
     </footer>
 
     <script>
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll(".nav-link");
+
+            function updateActiveLink() {
+                let currentSection = "";
+
+                sections.forEach((section) => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (window.scrollY >= sectionTop - sectionHeight / 3) {
+                        currentSection = section.getAttribute("id");
+                    }
+                });
+
+                navLinks.forEach((link) => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href").includes(currentSection)) {
+                        link.classList.add("active");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", updateActiveLink);
+        });
+
+
+        //add button states
+
+        // const button = document.getElementById('myButton');
+        // let isClicked = false; // Initialize the state
+
+        // button.addEventListener('click', () => {
+        //     if (!isClicked) {
+        //         // Button is not clicked yet, update the state and appearance
+        //         button.textContent = 'Clicked!';
+        //         button.style.backgroundColor = 'green';
+        //         isClicked = true;
+        //     } else {
+        //         // Button is already clicked, update the state and appearance
+        //         button.textContent = 'Click Me';
+        //         button.style.backgroundColor = 'blue';
+        //         isClicked = false;
+        //     }
+        // });
 
         //navigation mobile fix
         const hamburger = document.querySelector(".hamburger");
