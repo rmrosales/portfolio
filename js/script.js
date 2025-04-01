@@ -1,3 +1,4 @@
+//Floating elements
 function getRandomPosition(wrapper, div) {
     const wrapperRect = wrapper.getBoundingClientRect();
     const maxX = wrapperRect.width - div.clientWidth;
@@ -40,7 +41,7 @@ setInterval(moveDivsRandomly, 4000);
 
 
 
-
+//navigation active
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".nav-link");
