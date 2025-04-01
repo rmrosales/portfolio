@@ -1,3 +1,46 @@
+function getRandomPosition(wrapper, div) {
+    const wrapperRect = wrapper.getBoundingClientRect();
+    const maxX = wrapperRect.width - div.clientWidth;
+    const maxY = wrapperRect.height - div.clientHeight;
+    return {
+        x: Math.random() * maxX,
+        y: Math.random() * maxY,
+        rotation: Math.random() * 120 // Random rotation angle
+    };
+}
+
+function scatterDivsOnLoad() {
+    const wrapper = document.querySelector(".banner-container");
+
+    document.querySelectorAll(".animated-icons").forEach(div => {
+        // Randomize initial position with different starting delays
+        const { x, y, rotation } = getRandomPosition(wrapper, div);
+        div.style.transform = `translate(${x}px, ${y}px) rotate(${rotation}deg)`;
+
+        // Fade in after 2 seconds
+        setTimeout(() => {
+            div.style.opacity = 1; // Trigger fade-in effect
+        }, 2000); // Fade in after 2 seconds
+    });
+}
+
+function moveDivsRandomly() {
+    const wrapper = document.querySelector(".banner-container");
+    document.querySelectorAll(".animated-icons").forEach(div => {
+        const { x, y, rotation } = getRandomPosition(wrapper, div);
+        div.style.transform = `translate(${x}px, ${y}px) rotate(${rotation}deg)`;
+    });
+}
+
+// Scatter on load
+window.addEventListener("DOMContentLoaded", scatterDivsOnLoad);
+
+// Move elements with rotation every 3 seconds
+setInterval(moveDivsRandomly, 4000);
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".nav-link");
