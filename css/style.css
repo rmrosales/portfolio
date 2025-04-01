@@ -31,16 +31,16 @@
     position: absolute;
     z-index: -5;
     top: 0;
-    height: 70px;
+    height: 50px;
     /* control the size */
-    width: 70px;
-    border-radius: 35px;
-    border: 1px solid rgba(0, 0, 0, .08);
+    width: 50px;
+    border-radius: 25px;
+    border: 1px solid rgba(0, 0, 0, .1);
     /* aspect-ratio: 0.56; */
     /* clip-path: polygon(100% 0, 23% 46%, 46% 44%, 15% 69%, 38% 67%, 0 100%, 76% 57%, 53% 58%, 88% 33%, 60% 37%); */
     background: rgba(255, 255, 255, .1);
     backdrop-filter: blur(2px);
-    box-shadow: rgba(0, 0, 0, .3) 0px 10px 45px -15px;
+    box-shadow: rgba(0, 0, 0, .6) 0px 10px 35px -15px;
     transition: transform 4s ease-in-out, rotate 6s linear, opacity 3s ease-in-out;
     /* Add opacity transition */
     /* animation: moveBackground 5s infinite alternate ease-in-out; */
