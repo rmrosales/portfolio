@@ -523,7 +523,7 @@ header {
     font-weight: 500;
     line-height: normal;
     letter-spacing: -0.1px;
-    width: 30vw;
+    width: 100%;
 }
 
 .about-block p {
@@ -804,8 +804,9 @@ strong {
 }
 
 .project-photo {
-    width: 30vw;
+    /* width: 30vw; */
     height: auto;
+    display: flex;
 }
 
 .project-photo img {
