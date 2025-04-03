@@ -23,7 +23,6 @@
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, .1) 0px 10px 35px -15px;
     backdrop-filter: blur(2px);
-    /* width: max-content; */
 }
 
 .tech-icon-set-wrapper-inner {
@@ -42,7 +41,7 @@
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, .1) 0px 10px 35px -15px;
     backdrop-filter: blur(2px);
-    /* width: max-content; */
+    flex-wrap: wrap;
 }
 
 
