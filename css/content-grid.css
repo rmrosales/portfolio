@@ -1,3 +1,7 @@
+#coming-soon {
+    color: red;
+}
+
 .parent {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -133,11 +137,4 @@
         margin-top: 20px;
         padding: 0;
     }
-
-    /* .top-content-L, .mid-content-L, .bottom-content-L, 
-    .big-content-R, .big-content-L, .top-content-R, 
-    .mid-content-R, .bottom-content-R h2 {
-        font-size: 1.5rem;
-        line-height: 1.5rem;
-    }
-} */
+}
