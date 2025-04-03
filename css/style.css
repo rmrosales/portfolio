@@ -1107,6 +1107,7 @@ strong {
     }
 
     .about-block h2,
+    .block-intro h2,
     .project-about-block h2 {
         font-size: 1.5em;
         width: 100%;
