@@ -138,9 +138,10 @@
         padding: 0;
     }
 
-    /* .tech-icon-set-wrapper, .tech-icon-set-wrapper-inner {
-        width: auto;
-    } */
+    .tech-icon {
+        height: 30px;
+        width: 30px;
+    }
     
  
 }
